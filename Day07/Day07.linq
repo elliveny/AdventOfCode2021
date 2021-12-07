@@ -23,10 +23,9 @@ for (int checkPosition = 0; checkPosition < maxPosition + 1; checkPosition++) {
 	for (int otherPosition = 0; otherPosition < maxPosition + 1; otherPosition++) {
 		var fuelUsedPart1 = Math.Abs(checkPosition - otherPosition);
 		checkPositionTotalFuelPart1 += positionCounts[otherPosition] * fuelUsedPart1;
-		
-		int fuelUsedPart2 = 0;
+
 		var distancePart2 = Math.Abs(checkPosition - otherPosition);
-		for (var distanceStep = distancePart2; distanceStep > 0; distanceStep--) fuelUsedPart2 += distanceStep;
+		var fuelUsedPart2 = (distancePart2 * (distancePart2 + 1)) / 2;
 		checkPositionTotalFuelPart2 += positionCounts[otherPosition] * fuelUsedPart2;
 	}
 	if (checkPositionTotalFuelPart1 < leastFuelPart1) {
