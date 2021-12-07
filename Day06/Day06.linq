@@ -22,9 +22,9 @@ for (int day = 1; day <= 256 ; day++) {
 	adults[adultsDayIndex] += juvenilesToAdults;
 	juveniles[juvenilesDayIndex] = spawningAdults + juvenilesToAdults;
 	if (day == 80) {
-		Console.WriteLine($"Part 1: Day {day} Total Fish={(long)juveniles.Sum() + (long)adults.Sum()}");
+		Console.WriteLine($"Part 1: Day {day} Total Fish={juveniles.Sum() + adults.Sum()}");
 	}
 	if (day == 256) {
-		Console.WriteLine($"Part 2: Day {day} Total Fish={(long)juveniles.Sum() + (long)adults.Sum()}");
+		Console.WriteLine($"Part 2: Day {day} Total Fish={juveniles.Sum() + adults.Sum()}");
 	}
 }
